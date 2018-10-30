@@ -72,7 +72,8 @@
   (concat (context-object-properties model) (context-data-properties model)))
 
 (defn context-map [property-list]
-  (let [m (into (ordered-map) (concat context-curies property-list))]
+  (let [cx (map reverse context-curies)
+        m (into (ordered-map) (concat cx property-list))]
     {"@context" m}))
 
 (defn write-context [m target-file]
