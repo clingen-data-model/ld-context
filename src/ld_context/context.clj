@@ -9,8 +9,8 @@
 
 (def to-case csk/->snake_case)
 
-(def context-curies [["id" "@id"]
-                     ["type" "@type"]
+(def context-curies [["@id" "id"]
+                     ["@type" "type"]
                      ["http://purl.obolibrary.org/obo/SEPIO_" "SEPIO"]
                      ["http://purl.org/oban/" "OBAN"]
                      ["http://purl.org/dc/terms/" "DCTERMS"]
