@@ -49,7 +49,7 @@
   (not (and (.getURI resource) (label resource))))
 
 (defn make-object-property-tuple [resource]
-  [(label resource) {"id" (curied-uri resource context-curies), "type" "id"}])
+  [(label resource) {"@id" (curied-uri resource context-curies), "@type" "@id"}])
 
 (defn object-properties [model]
   (-> model .listObjectProperties iterator-seq))
